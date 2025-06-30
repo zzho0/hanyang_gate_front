@@ -1,45 +1,39 @@
-# Frontend Project Starter
+# Frontend Project Starter (Next.js 15)
 
-> 프론트엔드 개발 환경
+> 프론트엔드 개발 환경 템플릿
 
 ---
 
 ## 🛠️ 주요 스택 및 도구
 
-- **React 19 + React DOM**
+- **Next.js 15 (App Router 기반)**
 - **TypeScript 5**
-- **Vite**
-- **Tailwind CSS 3**
+- **Tailwind CSS 4** (+ tailwindcss-animate)
 - **shadcn/ui**
-- **Zustand**
-- **TanStack Query**
-- **React Router DOM v7**
-- **Prettier, ESLint**
+- **Zustand** – 전역 상태 관리
+- **TanStack Query** – 서버 상태 관리
+- **Prettier, ESLint (eslint-config-next)**
 
 ---
 
 ## 📂 폴더 구조 (중요 파일 기준)
 
 ```
-├── public/ # 정적 파일(이미지, favicon 등)
+├── public/
 │
-├── src/ # 소스 코드 루트
-│ ├── assets/ # 프로젝트 리소스(이미지, 폰트 등)
-│ │
-│ ├── components/ # 재사용 가능한 컴포넌트
-│ │ └── ui/ # shadcn 기반 UI 컴포넌트
-│ │
-│ ├── hooks/ # 커스텀 리액트 훅
-│ │ └── useQuery.ts # React Query 기반 데이터 페칭 훅 모음
-│ │ └── useToast.ts # shadcn 토스트용 커스텀 훅
-│ │
-│ ├── lib/ # 유틸 함수, 공통 로직
-│ ├── stores/ # zustand 스토어
-│ ├── pages/ # 라우팅 페이지 컴포넌트
-│ ├── styles/ # Tailwind, 전역 CSS 등 스타일 파일
-│ ├── App.tsx # 루트 앱 컴포넌트
-│ ├── main.tsx # 엔트리포인트
-│ └── main.css # 전역 스타일(Tailwind base 포함)
+├── app/ # App Router 기반 폴더
+│ ├── layout.tsx # 공통 레이아웃
+│ └── page.tsx # 초기 페이지
+│
+├── components/
+│ └── ui/ # shadcn 기반 UI 컴포넌트
+│
+├── hooks/ # 커스텀 훅
+├── lib/ # API, 유틸 등
+├── stores/ # zustand 스토어
+├── styles/ # 전역 스타일
+├── app/providers.tsx # 전역 Provider 모음
+└── tailwind.config.ts # Tailwind 설정
 ```
 
 ---
@@ -52,7 +46,7 @@
 yarn install
 ```
 
-### 2. 개발 서버 실행
+2. 개발 서버 실행
 
 ```
 yarn dev
