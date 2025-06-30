@@ -5,53 +5,57 @@ import meeting_hub from "@/assets/meeting_hub.svg";
 import notice from "@/assets/notice.svg";
 import personal_group from "@/assets/personal_group.svg";
 import webinar from "@/assets/webinar.svg";
-
-import { Settings } from "lucide-react";
+import settings from "@/assets/settings.svg";
 
 const Sidebar = () => {
   return (
     // pt 줘야함 헤더 크기에 맞춰서
-    <div className="flex w-[64px] h-[900px] px-[8px] py-[10px] flex-col justify-between items-center flex-shrink-0 border-r border-[rgba(194,196,200,0.52)] bg-[#F7F7F8] justify-between">
+    <div className="fixed flex w-[64px] h-full px-[8px] py-[10px] flex-col justify-between items-center flex-shrink-0 border-r border-[rgba(194,196,200,0.52)] bg-[#F7F7F8] justify-between">
       <div className="flex flex-col gap-[8px]">
         <Image
           src={home}
           alt="home"
-          className="w-[48px] h-[48px]"
+          className="w-[48px] h-[48px] cursor-pointer"
           draggable={false}
         />
         <Image
           src={calendar}
           alt="calendar"
-          className="w-[48px] h-[48px]"
+          className="w-[48px] h-[48px] cursor-pointer"
           draggable={false}
         />
         <Image
           src={notice}
           alt="notice"
-          className="w-[48px] h-[48px]"
+          className="w-[48px] h-[48px] cursor-pointer"
           draggable={false}
         />
         <Image
           src={personal_group}
           alt="personal_group"
-          className="w-[48px] h-[48px]"
+          className="w-[48px] h-[48px] cursor-pointer"
           draggable={false}
         />
         <Image
           src={meeting_hub}
           alt="meeting_hub"
-          className="w-[48px] h-[48px]"
+          className="w-[48px] h-[48px] cursor-pointer"
           draggable={false}
         />
         <Image
           src={webinar}
           alt="webinar"
-          className="w-[48px] h-[48px]"
+          className="w-[48px] h-[48px] cursor-pointer"
           draggable={false}
         />
       </div>
-      <div>
-        <Settings />
+      <div className="">
+        <Image
+          src={settings}
+          alt="settings"
+          className="w-[48px] h-[48px] cursor-pointer"
+          draggable={false}
+        />
       </div>
     </div>
   );
